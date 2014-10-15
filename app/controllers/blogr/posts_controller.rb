@@ -3,6 +3,7 @@ require_dependency "blogr/application_controller"
 module Blogr
   class PostsController < ApplicationController
     before_action :set_post, only: [:show, :edit, :update, :destroy]
+    skip_before_filter :authorize, only: [:show, :index]
 
     # GET /posts
     def index
@@ -24,7 +25,7 @@ module Blogr
 
     # POST /posts
     def create
-      @post = Post.new(post_params)
+      @post = current_user.posts.build(post_params)
 
       if @post.save
         redirect_to @post, notice: 'Post was successfully created.'
@@ -56,7 +57,7 @@ module Blogr
 
       # Only allow a trusted parameter "white list" through.
       def post_params
-        params.require(:post).permit(:title, :text)
+        params.require(:post).permit(:title, :text, :user_id)
       end
   end
 end

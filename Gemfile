@@ -13,4 +13,5 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
+gem 'jquery-rails'
