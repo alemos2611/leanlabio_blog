@@ -7,11 +7,11 @@ require "blogr/version"
 Gem::Specification.new do |s|
   s.name        = "blogr"
   s.version     = Blogr::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Blogr."
-  s.description = "TODO: Description of Blogr."
+  s.authors     = ["Gareth Fuller"]
+  s.email       = ["gareth.a.f@gmail.com"]
+  s.homepage    = "https://github.com/GAFuller/blogr"
+  s.summary     = "Blogging engine for existing rails apps."
+  s.description = "A mountable rails engine that can be used to attach a blog to any existing rails app."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
