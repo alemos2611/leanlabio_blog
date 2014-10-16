@@ -15,5 +15,6 @@ $ git clone git@github.com:GAFuller/blogr.git yourappname_blog
 
 Remove this repository as its origin:
 ```
+$ cd yourappname_blog
 $ git remote rm origin
 ```
