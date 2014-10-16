@@ -9,11 +9,11 @@ The engine has no styling whatsoever and so I would recommend cloning this repo 
 
 ## Setup your own blogging engine
 First clone this repository:
-'''
+```
 $ git clone git@github.com:GAFuller/blogr.git
-'''
+```
 
 Remove this repository as its origin:
-'''
+```
 $ git remote rm origin
-'''
+```
