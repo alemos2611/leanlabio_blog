@@ -1,6 +1,12 @@
 module Blogr
   class ApplicationController < ActionController::Base
-    before_filter :authorize
+    before_filter :authorize, :set_meta
+
+    def set_meta(title="", description="", keyowrds="")
+      @meta_title = if title != "" then title else Blogr.meta_title end
+      @meta_description = if description != "" then title else Blogr.meta_description end
+      @meta_keywords = if keyowrds != "" then title else Blogr.meta_keywords end
+    end
 
     private
 

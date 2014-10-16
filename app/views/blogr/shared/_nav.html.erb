@@ -1,7 +1,7 @@
 <% if current_user %>
   Author: <%= current_user.name %>
   |
-  <%= link_to "Add Author", new_user_path %>
+  <%= link_to 'Dashboard', dashboard_user_path(current_user) %>
   |
   <%= link_to 'New Post', new_post_path %>
   |

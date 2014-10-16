@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blogr</title>
+  <title><%= @meta_title %></title>
+  <meta name="description" content="<%= @meta_description %>">
+  <meta name="description" content="<%= @meta_keywords %>">
   <%= stylesheet_link_tag    "blogr/application", media: "all" %>
   <%= javascript_include_tag "blogr/application" %>
   <%= csrf_meta_tags %>

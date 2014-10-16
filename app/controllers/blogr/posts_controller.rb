@@ -46,7 +46,7 @@ module Blogr
     # DELETE /posts/1
     def destroy
       @post.destroy
-      redirect_to posts_url, notice: 'Post was successfully destroyed.'
+      redirect_to root_url, notice: 'Post was successfully destroyed.'
     end
 
     private

@@ -1,0 +1,8 @@
+<tr>
+  <td><%= user.name %></td>
+  <td><%= user.email %></td>
+  <td><%= user.posts.count %></td>
+  <% if user == current_user %>
+    <td><%= link_to "Edit", edit_user_path(current_user) %></td>
+  <% end %>
+</tr>

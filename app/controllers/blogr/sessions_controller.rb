@@ -12,7 +12,7 @@ module Blogr
 
       if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-        redirect_to root_url, notice: "Logged in!"
+        redirect_to dashboard_user_path(current_user), notice: "Logged in!"
       else
         flash[:error] = "Email or password is invalid."
         render :new
