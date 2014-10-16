@@ -9,9 +9,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render "blogr/shared/nav" %>
-<%= render "blogr/shared/notice" %>
-<%= yield %>
+  <%= auto_discovery_link_tag(:rss, root_url) %>
+  <%= render "blogr/shared/nav" %>
+  <%= render "blogr/shared/notice" %>
+  <%= yield %>
 
 </body>
 </html>
