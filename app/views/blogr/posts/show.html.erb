@@ -1,19 +1,10 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @post.title %></h1>
+<small>by <%= @post.user.name %></small>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<p><%= @post.text %></p>
 
-<p>
-  <strong>Author:</strong>
-  <%= @post.user.name %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @post.text %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<hr>
+<% if is_admin? %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
 <%= link_to 'Back', posts_path %>

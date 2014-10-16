@@ -1,7 +1,7 @@
 module Blogr
   class ApplicationController < ActionController::Base
     before_filter :authorize
-    
+
     private
 
     def current_user
@@ -13,9 +13,9 @@ module Blogr
       redirect_to root_url, alert: "Not authorized!" if current_user.nil?
     end
 
-    def is_author?
+    def is_admin?
       true if current_user
     end
-    helper_method :is_author?
+    helper_method :is_admin?
   end
 end
