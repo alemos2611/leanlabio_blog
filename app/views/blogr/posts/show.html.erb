@@ -1,5 +1,5 @@
 <h1><%= @post.title %></h1>
-<small>by <%= @post.user.name %></small>
+<small>by <%= @post.user.name %> <%= "on #{@post.published_at.strftime("%d %b, %Y")}" if @post.published_at %></small>
 
 <p><%= @post.text %></p>
 

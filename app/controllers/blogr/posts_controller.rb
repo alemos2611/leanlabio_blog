@@ -7,7 +7,7 @@ module Blogr
 
     # GET /posts
     def index
-      @posts = Post.all
+      @posts = Post.published
 
       respond_to do |format|
         format.html
@@ -62,7 +62,7 @@ module Blogr
 
       # Only allow a trusted parameter "white list" through.
       def post_params
-        params.require(:post).permit(:title, :text, :user_id)
+        params.require(:post).permit(:title, :text, :user_id, :published)
       end
   end
 end
