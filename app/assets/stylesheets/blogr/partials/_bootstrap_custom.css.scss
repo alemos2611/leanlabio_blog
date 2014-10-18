@@ -1,0 +1,38 @@
+// Overide bootstrap-select blue glow
+.form-group .btn-group, .bootstrap-select{
+  .btn, button, .btn-group, .selectpicker{
+    &:focus{
+      outline: none !important;
+      box-shadow:none !important;
+    }
+    li > a{
+      &:focus{
+        outline: none !important;
+        box-shadow:none !important;
+      }
+    }
+  }
+}
+
+.input-group{
+  input[type=text]{
+    @include border_radius(5px,0px,5px,0px);
+  }
+  .input-group-addon{
+    background: $interface-bg;
+    color: $black;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    border-right: 1px solid $grey;
+  }
+}
+
+.datepicker-days{
+  .active{
+    background: $blue !important;
+  }
+}
+
+.carousel-control.left, .carousel-control.right{
+  background: none !important; 
+}

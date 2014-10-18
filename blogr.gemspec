@@ -12,12 +12,16 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/GAFuller/blogr"
   s.summary     = "Blogging engine for existing rails apps."
   s.description = "A mountable rails engine that can be used to attach a blog to any existing rails app."
-  s.license     = "MIT"
+  s.license     = "Leanlab LTD"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.1.0"
+  s.add_dependency "bcrypt-ruby"
+  s.add_dependency "jquery-rails"
+  s.add_dependency "sass-rails"
+  s.add_dependency "bootstrap-sass", "~> 3.2.0"
 
   s.add_development_dependency "pg"
 end

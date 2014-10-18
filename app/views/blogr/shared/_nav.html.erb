@@ -1,16 +1,61 @@
 <% if current_user %>
-  Author: <%= current_user.name %>
-  |
-  <%= link_to 'Home', root_url %>
-  |
-  <%= link_to 'Dashboard', dashboard_user_path(current_user) %>
-  |
-  <%= link_to 'New Post', new_post_path %>
-  |
-  <%= link_to "Log out", session_path(current_user), method: "delete" %>
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target="#collapse-menu" data-toggle="collapse" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to root_url do %>
+          <%= image_tag("blogr/logo_small.png", :class => "logo") %>
+        <% end %>
+      </div>
+      <div class="collapse navbar-collapse" id="collapse-menu">
+        <div class="nav-spacer"></div>
+        <ul class="nav navbar-nav">
+          <li class="<%= ("font-w-bold" if controller.controller_name == "users" && controller.action_name == "dashboard") %>">
+            <%= link_to 'Dashboard', dashboard_user_path(current_user), :class => "black-link" %>
+          </li>
+          <li class="<%= ("font-w-bold" if controller.controller_name == "posts" && controller.action_name == "new") %>">
+            <%= link_to 'New Post', new_post_path, :class => "black-link" %>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <div class="nav-spacer"></div>
+          <li>
+            <%= link_to "Log out", session_path(current_user), method: "delete", :class => "black-link" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 <% else %>
-  <%= link_to 'Home', root_url %>
-  |
-  <%= link_to "Log in", new_session_path %>
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target="#collapse-menu" data-toggle="collapse" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to root_url do %>
+          <%= image_tag("blogr/logo_small.png", :class => "logo") %>
+        <% end %>
+      </div>
+      <div class="collapse navbar-collapse" id="collapse-menu">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="button-item">
+            <%= link_to 'Home', root_url, :class => "normal-link font-serif" %>
+          </li>
+          <div class="nav-spacer"></div>
+          <li class="button-item">
+            <%= link_to "Log in", new_session_path, :class => "normal-link font-serif" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 <% end %>
-<hr>

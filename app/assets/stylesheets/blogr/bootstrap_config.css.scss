@@ -1,0 +1,32 @@
+@import "mixins/all";
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic");
+
+// Colors
+$brand-primary: $blue;
+$brand-success: $green;
+$brand-warning: $orange;
+$brand-danger: $red;
+
+$gray-darker:lighten($black,2.5%);
+$gray-dark:lighten($black,5%);
+$gray:lighten($black,20%);
+$gray-light:lighten($black,50%);
+$gray-lighter:lighten($black,60%);
+
+// Fonts
+$font-family-serif: 'PT Serif', Georgia, 'Times New Roman', Times, serif !important;
+
+input, textarea, button, select, button{
+	outline: none !important;
+  border: none !important;
+  box-shadow:none !important;
+}
+
+.nav-collapse.collapse {
+	height: auto !important;
+	overflow: visible !important;
+}
+
+// set all custom variables above import
+@import "bootstrap-sprockets";
+@import "bootstrap";

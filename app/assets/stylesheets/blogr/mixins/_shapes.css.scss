@@ -1,0 +1,13 @@
+@mixin rectangle($width, $height, $color){
+	background-color: $color;
+	height: $height;
+	width: $width;
+}
+
+@mixin circle($radius){
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	width: $radius * 2;
+	height: $radius * 2
+}

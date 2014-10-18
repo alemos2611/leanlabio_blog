@@ -1,0 +1,36 @@
+@mixin general_button_style($color){
+	border: 1px solid darken($color, 10%) !important;
+	&:hover{
+		border: 1px solid darken($color, 10%) !important;
+		@include vertical_bg_gradient($color, darken($color, 3%));
+	}
+}
+
+@mixin default_button_style($color){
+	border: 1px solid darken($grey, 2%) !important;
+	&:hover{
+		border: 1px solid darken($grey, 3%) !important;
+		@include vertical_bg_gradient($color, darken($color, 0%));
+	}
+}
+
+@mixin minimal_button_style($color){
+	border: 2px solid $color !important;
+	background: transparent !important;
+	color: $color !important;
+	font-weight: bold;
+	-webkit-transition: background 0.1s linear;
+  -moz-transition: background 0.1s linear;
+  -ms-transition: background 0.1s linear;
+  -o-transition: background 0.1s linear;
+  transition: background 0.1s linear;
+	&:hover{
+		color: white !important;
+		background: $color !important;
+	}
+}
+
+
+@mixin form_shadow(){
+	@include box_shadow($grey-dark, 0, 1px, 1px, 0px);
+}

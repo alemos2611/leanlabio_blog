@@ -1,0 +1,133 @@
+// Global
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=date],
+input[type=select],
+textarea{
+	border: 2px solid $grey !important;
+	color: $black;
+	@include border_radius(5px,5px,5px,5px);
+	-webkit-transition: border 0.1s linear;
+	-moz-transition: border 0.1s linear;
+	-ms-transition: border 0.1s linear;
+	-o-transition: border 0.1s linear;
+	transition: border 0.1s linear;
+	&:focus{
+		border: 2px solid lighten($blue, 25%) !important;
+		// -webkit-box-shadow: 0px 0px 4px lighten($blue, 25%) !important;
+    //    -moz-box-shadow: 0px 0px 4px lighten($blue, 25%) !important;
+    //         box-shadow: 0px 0px 4px lighten($blue, 25%) !important;
+	}
+}
+
+label{
+	font-size: 12pt;
+}
+
+// Placeholders
+::-webkit-input-placeholder {
+   color: $dark-grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: $dark-grey;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $dark-grey;
+}
+:-ms-input-placeholder {
+   color: $dark-grey;
+}
+
+// Errors
+.errors{
+	.alert-error{
+		text-align: left;
+		h4{ font-weight: 600; }
+		background: $red;
+		color: white;
+		padding: 10px;
+		margin-bottom: 20px;
+		border: 1px solid $dark-red;
+		position: inherit;
+	}
+}
+.field-with-error{
+  input{ border: 1px solid $red !important; }
+}
+
+.payment-errors{
+	background: $red;
+	color: white;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid $dark-red;
+	@include border_radius();
+	display: none;
+}
+
+// Custom Inputs
+input[type=text].input-underline{
+	border: none !important;
+	border-bottom: 1px solid $dark-grey !important;
+	@include border_radius(0px,0px,0px,0px);
+	&:focus{
+		border: none !important;
+		border-bottom: 1px solid $dark-grey !important;
+		-webkit-box-shadow: none !important;
+			-moz-box-shadow: none !important;
+						box-shadow: none !important;
+	}
+}
+
+.name-input{
+	font-weight: bold;
+	font-size: 16pt;
+	padding-left: 1px;
+}
+
+.card-exp-input{
+	input{ float: left !important }
+	span{ float: left !important }
+}
+
+.m-postit form{
+	input[type=text], textarea{
+		background-color: transparent;
+		width: 100%;
+		outline: none !important;
+		border: none !important;
+		box-shadow:none !important;
+		&:focus{
+			outline: none !important;
+			border: none !important;
+			box-shadow:none !important;
+		}
+	}
+	.note-name-input{
+		color: $red;
+		font-weight: 600;
+		font-size: 18px;
+	}
+	.note-subtitle-input{
+		font-style: italic;
+		color: $muted;
+	}
+	.note-content-input{
+		color: $black;
+		resize: none;
+	}
+}
+
+.editable-input-container{
+	.editable-input{
+		&:hover{
+			border-bottom: 1px dotted $muted;
+		}
+	}
+	.editable-input-form{
+		display: inline;
+		float: left;
+	}
+}

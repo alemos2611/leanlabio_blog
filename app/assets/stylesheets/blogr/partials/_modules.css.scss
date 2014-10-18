@@ -1,0 +1,113 @@
+.m-white{ background: white; }
+.m-light-grey{ background: $light-grey; }
+.m-dark-grey{ background: $dark-grey; }
+.m-blank-slate{ border: 1px dashed $grey; }
+
+.m-form{
+  padding: 30px;
+  border: 1px solid $grey;
+  background: white;
+  @include border_radius(5px,5px,5px,5px);
+  // @include box_shadow();
+}
+
+.m-default{
+  border: 1px solid $grey;
+  background: white;
+  @include border_radius(3px,3px,3px,3px);
+}
+
+.m-sub-divide{
+  background: $interface-bg;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+}
+
+.m-h-divider{
+  border-top: 1px solid $grey;
+}
+
+.m-interface-bg{
+  background: $interface-bg;
+}
+
+.m-app{
+  background: white;
+  border: 1px solid $grey;
+  @include border_radius(5px,5px,5px,5px);
+  // @include box_shadow();
+  .header{
+    @include border_radius(5px,5px,0px,0px);
+    .titles{
+      h1{
+        margin: 8px 15px !important;
+        font-size: 20px;
+        line-height: 32px
+      }
+    }
+    .actions{
+      .btn{ margin: 7px 8px; }
+    }
+  }
+  .content{
+
+  }
+  .rows{
+    border-top: 1px solid $grey;
+    .rows-header{
+      border-bottom: 1px solid $grey;
+      background: $interface-bg
+    }
+    .rows-add{
+      text-decoration: none;
+    }
+    .content-row{
+      border-top: 1px solid $grey;
+    }
+  }
+  .footer{
+    background: $interface-bg;
+    height: 50px;
+    border-top: 1px solid $grey;
+    @include border_radius(0px,0px,5px,5px);
+  }
+}
+
+.m-info{
+  background: lighten($orange, 32%);
+  border: 1px solid lighten($orange, 28%);
+  @include border_radius(2px,2px,2px,2px);
+  box-shadow: none !important;
+}
+
+.m-stat{
+  margin: auto;
+  padding-top: 40px;
+}
+
+.comment-form{
+  textarea{ resize: none; }
+}
+
+.m-comments{
+  border: 1px solid $grey;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include box_shadow();
+  @include border_radius(5px,5px,5px,5px);
+  textarea{
+    outline: none !important;
+    border: none !important;
+    box-shadow:none !important;
+  }
+}
+
+
+.m-postit{
+  background-color: $yellow !important;
+  border: 1px solid lighten($grey, 4%);
+  border-top: 1px solid lighten($grey, 7%);
+  min-height: 250px;
+  .data{ padding: 20px; }
+}

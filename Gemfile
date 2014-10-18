@@ -15,3 +15,5 @@ gemspec
 
 gem 'bcrypt-ruby'
 gem 'jquery-rails'
+gem 'sass-rails'
+gem 'bootstrap-sass', '~> 3.2.0'
