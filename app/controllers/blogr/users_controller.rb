@@ -2,6 +2,7 @@ require_dependency "blogr/application_controller"
 
 module Blogr
   class UsersController < ApplicationController
+    skip_before_filter :authorize, only: [:new, :create]
 
     def dashboard
       @users = User.all
