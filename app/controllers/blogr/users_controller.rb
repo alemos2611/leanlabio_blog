@@ -21,7 +21,8 @@ module Blogr
       @user = User.new(user_params)
 
       if @user.save
-        redirect_to root_url, notice: "New user created!"
+        session[:user_id] = @user.id
+        redirect_to dashboard_user_path(@user), notice: "New author created!"
       else
         render :new
       end
