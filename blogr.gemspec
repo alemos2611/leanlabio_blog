@@ -22,6 +22,9 @@ Gem::Specification.new do |s|
   s.add_dependency "jquery-rails"
   s.add_dependency "sass-rails"
   s.add_dependency "bootstrap-sass", "~> 3.2.0"
+  s.add_dependency 'fog'
+  s.add_dependency "mini_magick"
+  s.add_dependency 'carrierwave'
 
   s.add_development_dependency "pg"
 end

@@ -2,6 +2,9 @@ module Blogr
   class User < ActiveRecord::Base
     has_secure_password
 
+    # Uploaders
+    mount_uploader :avatar, AvatarUploader
+
     # Associations
     has_many :posts
 

@@ -7,6 +7,8 @@
   <%= stylesheet_link_tag    "blogr/application", media: "all" %>
   <%= javascript_include_tag "blogr/application" %>
   <%= csrf_meta_tags %>
+
+  <%= render "blogr/3rd_party/share_this" %>
 </head>
 <body class="blogr">
   <%= auto_discovery_link_tag(:rss, root_url) %>
@@ -14,5 +16,6 @@
   <%= render "blogr/shared/notice" %>
   <%= yield %>
 
+  <%= render "blogr/3rd_party/disqus" %>
 </body>
 </html>

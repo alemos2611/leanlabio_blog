@@ -1,124 +1,126 @@
-// =============
-// = Variables =
-// =============
-$font-small: 10px;
-$font-default: 14px;
-$font-large: 18px;
-$font-xl: 24px;
+.blogr{
+	// =============
+	// = Variables =
+	// =============
+	$font-small: 10px;
+	$font-default: 14px;
+	$font-large: 18px;
+	$font-xl: 24px;
 
-$font-w-light: 300;
-$font-w-normal: 400;
-$font-w-bold: bold;
+	$font-w-light: 300;
+	$font-w-normal: 400;
+	$font-w-bold: bold;
 
-// ===========
-// = Generic =
-// ===========
+	// ===========
+	// = Generic =
+	// ===========
 
-// colors
-.font-std-color{ color: $light-black; }
-.font-white{ color: white; }
-.font-blue{ color: $blue; }
-.font-red{ color: $red; }
-.font-green{ color: $green; }
-.font-orange{ color: $orange; }
-.font-black{ color: $black; }
-.font-grey{ color: $grey; }
+	// colors
+	.font-std-color{ color: $light-black; }
+	.font-white{ color: white; }
+	.font-blue{ color: $blue; }
+	.font-red{ color: $red; }
+	.font-green{ color: $green; }
+	.font-orange{ color: $orange; }
+	.font-black{ color: $black; }
+	.font-grey{ color: $grey; }
 
-// decoration
-.underline{ text-decoration: underline; }
-.no-underline{ text-decoration: none; }
+	// decoration
+	.underline{ text-decoration: underline; }
+	.no-underline{ text-decoration: none; }
 
-// sizes
-.font-small{ font-size: $font-small; }
-.font-default{ font-size: $font-default; }
-.font-large{ font-size: $font-large; }
-.font-xl{ font-size: $font-xl; }
+	// sizes
+	.font-small{ font-size: $font-small; }
+	.font-default{ font-size: $font-default; }
+	.font-large{ font-size: $font-large; }
+	.font-xl{ font-size: $font-xl; }
 
-// Weights
-.font-w-light{ font-weight: $font-w-light; }
-.font-w-normal{ font-weight: $font-w-normal; }
-.font-w-bold{ font-weight: $font-w-bold; }
+	// Weights
+	.font-w-light{ font-weight: $font-w-light; }
+	.font-w-normal{ font-weight: $font-w-normal; }
+	.font-w-bold{ font-weight: $font-w-bold; }
 
-// Positioning
-.text-justify{ text-align: justify; }
+	// Positioning
+	.text-justify{ text-align: justify; }
 
-// familys
-.font-serif{
-	font-family: $font-family-secondary;
-}
-.font-sans-serif{
-	font-family: $font-family-primary;
-}
+	// familys
+	.font-serif{
+		font-family: $font-family-secondary;
+	}
+	.font-sans-serif{
+		font-family: $font-family-primary;
+	}
 
-// ============
-// = Headings =
-// ============
-h1, h2, h3, h4, h5, h6 {
-	font-size: $font-default;
-	margin: 0;
-	padding: 0;
-	line-height: 20px;
-	font-weight: 600;
-}
+	// ============
+	// = Headings =
+	// ============
+	h1, h2, h3, h4, h5, h6 {
+		font-size: $font-default;
+		margin: 0;
+		padding: 0;
+		line-height: 20px;
+		font-weight: 600;
+	}
 
-label{
-  font-weight: 700 !important;
-}
+	label{
+		font-weight: 700 !important;
+	}
 
-.lead{
-  font-weight: 400 !important;
-}
+	.lead{
+		font-weight: 400 !important;
+	}
 
-.headline-underline{ border-bottom: 3px solid $light-black; }
+	.headline-underline{ border-bottom: 3px solid $light-black; }
 
-.heading-xl{
-	font-size: 52px;
-	line-height: 60px;
-	font-weight: 700;
-}
+	.heading-xl{
+		font-size: 52px;
+		line-height: 60px;
+		font-weight: 700;
+	}
 
-.heading-l{
-	font-size: 32px;
-	line-height: 40px;
-	font-weight: 700;
-}
+	.heading-l{
+		font-size: 32px;
+		line-height: 40px;
+		font-weight: 700;
+	}
 
-.heading-m{
-	font-size: 28px;
-	line-height: 36px;
-	font-weight: 700;
-}
+	.heading-m{
+		font-size: 28px;
+		line-height: 36px;
+		font-weight: 700;
+	}
 
-.heading-s{
-	font-size: 24px;
-	line-height: 32px;
-	font-weight: 700;
-}
+	.heading-s{
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 700;
+	}
 
-.heading-xs{
-	font-size: 18px;
-	line-height: 20px;
-	font-weight: 700;
-}
+	.heading-xs{
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: 700;
+	}
 
-.heading-bold{
-  font-size: 18px;
-	line-height: 22px;
-	font-weight: 700;
-}
+	.heading-bold{
+		font-size: 18px;
+		line-height: 22px;
+		font-weight: 700;
+	}
 
-.heading-red{
-	font-size: 20px;
-	line-height: 32px;
-	color: $red;
-}
+	.heading-red{
+		font-size: 20px;
+		line-height: 32px;
+		color: $red;
+	}
 
-.heading-stat{
-	font-size: 42px;
-	line-height: 50px;
-	font-weight: 300;
-}
+	.heading-stat{
+		font-size: 42px;
+		line-height: 50px;
+		font-weight: 300;
+	}
 
-.heading-slim{
-	font-weight: 300;
+	.heading-slim{
+		font-weight: 300;
+	}
 }

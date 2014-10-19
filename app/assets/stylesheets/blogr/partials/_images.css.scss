@@ -1,56 +1,59 @@
-.i-square-10{ width: 10px; height: 10px; }
-.i-square-20{ width: 20px; height: 20px; }
-.i-square-30{ width: 30px; height: 30px; }
-.i-square-40{ width: 40px; height: 40px; }
-.i-square-50{ width: 50px; height: 50px; }
-.i-square-75{ width: 75px; height: 75px; }
+.blogr{
+  .i-square-10{ width: 10px; height: 10px; }
+  .i-square-20{ width: 20px; height: 20px; }
+  .i-square-30{ width: 30px; height: 30px; }
+  .i-square-40{ width: 40px; height: 40px; }
+  .i-square-50{ width: 50px; height: 50px; }
+  .i-square-75{ width: 75px; height: 75px; }
 
-.i-square-100{ width: 100px; height: 100px; }
-.i-square-150{ width: 150px; height: 150px; }
-.i-square-200{ width: 200px; height: 200px; }
-.i-square-300{ width: 300px; height: 300px; }
-.i-square-400{ width: 400px; height: 400px; }
-.i-square-500{ width: 500px; height: 500px; }
+  .i-square-100{ width: 100px; height: 100px; }
+  .i-square-150{ width: 150px; height: 150px; }
+  .i-square-200{ width: 200px; height: 200px; }
+  .i-square-300{ width: 300px; height: 300px; }
+  .i-square-400{ width: 400px; height: 400px; }
+  .i-square-500{ width: 500px; height: 500px; }
 
-.i-center{ margin-right: auto; margin-left: auto; }
+  .i-center{ margin-right: auto; margin-left: auto; }
 
-.i-inline{ display: inline; }
+  .i-inline{ display: inline; }
 
-.card-icon{
-  width: 50px;
-  height: 30px;
-}
+  .card-icon{
+    width: 50px;
+    height: 30px;
+  }
 
-.cover-photo{
-  height: 350px;
-}
+  .cover-photo{
+    height: 350px;
+  }
 
-.avatar{
-  padding: 1px;
-  background: white;
-}
-.team-avatar{
-  border: 1px solid $grey;
-}
-.user-avatar{
-}
-.avatar-xxs{
-  width: 20px;
-  height: 20px;
-}
-.avatar-xs{
-  width: 35px;
-  height: 35px;
-}
-.avatar-s{
-  width: 50px;
-  height: 50px;
-}
-.avatar-m{
-  width: 65px;
-  height: 65px;
-}
-.avatar-l{
-  width: 150px;
-  height: 150px;
+  .avatar{
+    padding: 1px;
+    background: white;
+  }
+  .team-avatar{
+    border: 1px solid $grey;
+  }
+  .user-avatar{
+  }
+  .avatar-xxs{
+    width: 20px;
+    height: 20px;
+  }
+  .avatar-xs{
+    width: 35px;
+    height: 35px;
+  }
+  .avatar-s{
+    width: 50px;
+    height: 50px;
+  }
+  .avatar-m{
+    width: 65px;
+    height: 65px;
+  }
+  .avatar-l{
+    width: 150px;
+    height: 150px;
+  }
+
 }

@@ -17,3 +17,11 @@ gem 'bcrypt-ruby'
 gem 'jquery-rails'
 gem 'sass-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
+
+# File uploads:
+# for aws cloud storage
+gem 'fog'
+# photo resizing
+gem "mini_magick"
+# file upload solution
+gem 'carrierwave'

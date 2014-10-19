@@ -1,10 +1,12 @@
-ul.custom-muted {
-    list-style: none;
-    padding:0;
-    margin:0;
+.blogr{
+  ul.custom-muted {
+      list-style: none;
+      padding:0;
+      margin:0;
 
-    li:before {
-        content: "- ";
-        color: $muted; /* or whatever color you prefer */
-    }
+      li:before {
+          content: "- ";
+          color: $muted; /* or whatever color you prefer */
+      }
+  }
 }

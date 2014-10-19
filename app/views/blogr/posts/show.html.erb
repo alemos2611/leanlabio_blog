@@ -1,10 +1,5 @@
-<h1><%= @post.title %></h1>
-<small>by <%= @post.user.name %> <%= "on #{@post.published_at.strftime("%d %b, %Y")}" if @post.published_at %></small>
-
-<p><%= @post.text %></p>
-
-<hr>
-<% if is_admin? %>
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-<% end %>
-<%= link_to 'Back', root_path %>
+<div class="container">
+  <%= render @post %>
+  <%= render "share" %>
+  <%= render "comments" %>
+</div>

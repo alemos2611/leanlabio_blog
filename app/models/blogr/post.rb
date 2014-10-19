@@ -6,6 +6,9 @@ module Blogr
     # Scopes
     scope :published, -> { where(published: true) }
 
+    # Uploaders
+    mount_uploader :header, ImageUploader
+
     # Associations
     belongs_to :user
 

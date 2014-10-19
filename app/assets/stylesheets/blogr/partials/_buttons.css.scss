@@ -1,54 +1,31 @@
-.btn{
-	font-family: $font-family-primary;
-	// &:hover{
-	// 	@include box_shadow($dark-grey, 0, 1px, 1px, 0px);
-	// }
-}
+.blogr{
+	.btn{
+		font-family: $font-family-primary;
+	}
 
-.btn:active
-{
-    box-shadow:none;
-}
+	.btn:active
+	{
+			box-shadow:none;
+	}
 
-// .btn-default{
-// 	@include default_button_style($interface-bg);
-// 	&:hover{
-// 		@include box_shadow($grey, 0, 1px, 1px, 0px);
-// 	}
-// }
-//
-// .btn-primary{
-// 	@include general_button_style($blue);
-// }
-//
-// .btn-success{
-// 	@include general_button_style($green);
-// }
-//
-// .btn-danger{
-// 	@include general_button_style($red);
-// }
-//
-// .btn-warning{
-// 	@include general_button_style($orange);
-// }
+	.btn-default{
+		@include minimal_button_style(lighten($black, 50%));
+	}
 
-.btn-default{
-	@include minimal_button_style(lighten($black, 50%));
-}
+	.btn-primary{
+		@include minimal_button_style($blue);
+	}
 
-.btn-primary{
-	@include minimal_button_style($blue);
-}
+	.btn-success{
+		@include minimal_button_style($green);
+	}
 
-.btn-success{
-	@include minimal_button_style($green);
-}
+	.btn-danger{
+		@include minimal_button_style($red);
+	}
 
-.btn-danger{
-	@include minimal_button_style($red);
-}
+	.btn-warning{
+		@include minimal_button_style($orange);
+	}
 
-.btn-warning{
-	@include minimal_button_style($orange);
 }

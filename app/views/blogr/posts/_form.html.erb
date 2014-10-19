@@ -2,6 +2,14 @@
   <%= render "blogr/shared/form_errors", object: @post %>
 
   <div class="field">
+    <%= f.label :header %><br>
+    <%= f.file_field :header %>
+    <p class="help-block">
+      Resources:
+      <%= link_to "Canva", "https://www.canva.com/" %>
+    </p>
+  </div>
+  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>

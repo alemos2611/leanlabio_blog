@@ -1,28 +1,30 @@
-.ba-light{ border: 1px solid darken($light-grey, 2%); }
-.bt-light{ border-top: 1px solid darken($light-grey, 2%); }
-.bb-light{ border-bottom: 1px solid darken($light-grey, 2%); }
-.bl-light{ border-left: 1px solid darken($light-grey, 2%); }
-.br-light{ border-right: 1px solid darken($light-grey, 2%); }
+.blogr{
+  .ba-light{ border: 1px solid darken($light-grey, 2%); }
+  .bt-light{ border-top: 1px solid darken($light-grey, 2%); }
+  .bb-light{ border-bottom: 1px solid darken($light-grey, 2%); }
+  .bl-light{ border-left: 1px solid darken($light-grey, 2%); }
+  .br-light{ border-right: 1px solid darken($light-grey, 2%); }
 
-.ba{ border: 1px solid $grey; }
-.bt{ border-top: 1px solid $grey; }
-.bb{ border-bottom: 1px solid $grey; }
-.bl{ border-left: 1px solid $grey; }
-.br{ border-right: 1px solid $grey; }
+  .ba{ border: 1px solid $grey; }
+  .bt{ border-top: 1px solid $grey; }
+  .bb{ border-bottom: 1px solid $grey; }
+  .bl{ border-left: 1px solid $grey; }
+  .br{ border-right: 1px solid $grey; }
 
-.b-red{ border: 1px solid $red; }
-.b-blue{ border: 1px solid $blue; }
-.b-green{ border: 1px solid $green; }
-.b-yellow{ border: 1px solid $orange; }
+  .b-red{ border: 1px solid $red; }
+  .b-blue{ border: 1px solid $blue; }
+  .b-green{ border: 1px solid $green; }
+  .b-yellow{ border: 1px solid $orange; }
 
-.ba-black{ border: 1px solid $black; }
-.bt-black{ border-top: 1px solid $black; }
-.bb-black{ border-bottom: 1px solid $black; }
-.bl-black{ border-left: 1px solid $black; }
-.br-black{ border-right: 1px solid $black; }
+  .ba-black{ border: 1px solid $black; }
+  .bt-black{ border-top: 1px solid $black; }
+  .bb-black{ border-bottom: 1px solid $black; }
+  .bl-black{ border-left: 1px solid $black; }
+  .br-black{ border-right: 1px solid $black; }
 
-.ba-red{ border: 1px solid $red; }
-.bt-red{ border-top: 1px solid $red; }
-.bb-red{ border-bottom: 1px solid $red; }
-.bl-red{ border-left: 1px solid $red; }
-.br-red{ border-right: 1px solid $red; }
+  .ba-red{ border: 1px solid $red; }
+  .bt-red{ border-top: 1px solid $red; }
+  .bb-red{ border-bottom: 1px solid $red; }
+  .bl-red{ border-left: 1px solid $red; }
+  .br-red{ border-right: 1px solid $red; }
+}

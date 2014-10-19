@@ -1,4 +1,6 @@
 Blogr::Engine.routes.draw do
+  resources :subscribers
+
   resources :configurations
 
   resources :sessions
