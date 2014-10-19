@@ -59,6 +59,12 @@
               <li class="button-item">
                 <%= link_to 'Startup Ideas Blog', root_url, :class => "normal-link font-serif" %>
               </li>
+              <% unless controller_name == "subscribers" %>
+                <div class="nav-spacer"></div>
+                <li class="mlm">
+                  <%= render "blogr/subscribers/form" %>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>

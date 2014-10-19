@@ -1,6 +1,6 @@
 module Blogr
   class ApplicationController < ActionController::Base
-    before_filter :authorize, :set_meta
+    before_filter :authorize, :set_meta, :new_subscriber
 
     def set_meta(title="", description="", keyowrds="")
       @meta_title = if title != "" then title else Blogr.meta_title end
@@ -9,6 +9,10 @@ module Blogr
     end
 
     private
+
+    def new_subscriber
+        @subscriber = Subscriber.new
+    end
 
     def current_user
       @current_user ||= User.find(session[:user_id]) if session[:user_id]

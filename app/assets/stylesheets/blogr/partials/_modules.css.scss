@@ -29,4 +29,11 @@
     .shares{
     }
   }
+
+  .m-form{
+    padding: 30px;
+    border: 1px solid $grey;
+    background: white;
+    @include border_radius(5px,5px,5px,5px);
+  }
 }

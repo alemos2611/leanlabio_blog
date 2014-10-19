@@ -3,6 +3,8 @@ require_dependency "blogr/application_controller"
 module Blogr
   class SubscribersController < ApplicationController
     before_action :set_subscriber, only: [:show, :edit, :update, :destroy]
+    skip_before_filter :authorize, only: [:new, :create]
+    skip_before_filter :new_subscriber
 
     # GET /subscribers
     def index
@@ -27,7 +29,7 @@ module Blogr
       @subscriber = Subscriber.new(subscriber_params)
 
       if @subscriber.save
-        redirect_to @subscriber, notice: 'Subscriber was successfully created.'
+        redirect_to root_url, notice: 'Great! we\'ll send you updates when we publish new articles.'
       else
         render :new
       end
@@ -36,7 +38,7 @@ module Blogr
     # PATCH/PUT /subscribers/1
     def update
       if @subscriber.update(subscriber_params)
-        redirect_to @subscriber, notice: 'Subscriber was successfully updated.'
+        redirect_to dasboard_user_path(current_user), notice: 'Subscriber was successfully updated.'
       else
         render :edit
       end
@@ -45,7 +47,7 @@ module Blogr
     # DELETE /subscribers/1
     def destroy
       @subscriber.destroy
-      redirect_to subscribers_url, notice: 'Subscriber was successfully destroyed.'
+      redirect_to dasboard_user_path(current_user), notice: 'Subscriber was successfully destroyed.'
     end
 
     private

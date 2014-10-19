@@ -1,27 +1,34 @@
-<%= form_for(@post) do |f| %>
+<%= form_for(@post, role: "form") do |f| %>
   <%= render "blogr/shared/form_errors", object: @post %>
 
-  <div class="field">
-    <%= f.label :header %><br>
-    <%= f.file_field :header %>
+
+  <div class="form-group">
+    <%= f.text_field :title, :class => "form-control input-underline name-input", placeholder: "Post title", autofocus: true, value: @post.title || "Post title" %>
+    <style>
+      .name-input { font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif; }
+    </style>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :text, id: "post-textarea", :class => "form-control", placeholder: "Write your post..." %>
+    <style>
+      #post-textarea { font-family: 'PT Serif', Georgia, 'Times New Roman', Times, serif; }
+    </style>
+  </div>
+  <hr>
+  <div class="form-group">
+    <%= f.label :header, "Header Image" %>
+    <%= f.file_field :header, :class => "form-control" %>
     <p class="help-block">
       Resources:
-      <%= link_to "Canva", "https://www.canva.com/" %>
+      <%= link_to "Canva", "https://www.canva.com/" %>,
+      <%= link_to "Unsplash", "http://www.arthurweill.fr/Unsplash/en" %>
     </p>
   </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="checkbox">
+    <label>
+      <%= f.check_box :published, :class => "form-control" %>
+      <span>Publish?</span>
+    </label>
   </div>
-  <div class="field">
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </div>
-  <div class="field">
-    <%= f.label :published, "Publish?" %><br>
-    <%= f.check_box :published %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit nil, :class => "btn btn-primary" %>
 <% end %>

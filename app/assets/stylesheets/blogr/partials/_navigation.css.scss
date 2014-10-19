@@ -1,10 +1,4 @@
 .blogr{
-  .marketing{
-    .navbar-custom{
-      background: white;
-    }
-  }
-
   .navbar-custom{
     background-color:rgba(255,255,255,0.98);
     background: white;
@@ -69,4 +63,7 @@
     }
   }
 
+  .form-inline{
+    margin-top: 10px;
+  }
 }

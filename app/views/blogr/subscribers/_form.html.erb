@@ -1,21 +1,8 @@
-<%= form_for(@subscriber) do |f| %>
-  <% if @subscriber.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+<%= form_for @subscriber, html: { :class => "form-inline" } do |f| %>
+  <%= render "blogr/shared/form_errors", object: @subscriber %>
 
-      <ul>
-      <% @subscriber.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+  <div class="form-group">
+    <%= f.text_field :email, :class => "form-control", placeholder: "Enter email address" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit "Subscribe", :class => "btn btn-primary" %>
 <% end %>
