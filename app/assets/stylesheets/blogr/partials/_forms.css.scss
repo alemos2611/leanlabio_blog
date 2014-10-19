@@ -5,8 +5,7 @@
 	input[type=email],
 	input[type=number],
 	input[type=date],
-	input[type=select],
-	textarea{
+	input[type=select]{
 		border: 2px solid $grey !important;
 		color: $black;
 		@include border_radius(5px,5px,5px,5px);
@@ -136,17 +135,14 @@
 		}
 	}
 
-	#post-textarea{
+	.editable{
+		font-family: $font-family-secondary;
+		font-weight: normal;
 		resize: none;
 		font-size: 15pt !important;
 		line-height: 1.5 !important;
 		border: 0px !important;
 		padding: 0 !important;
-		&:focus{
-			font-size: 15pt !important;
-			line-height: 1.5 !important;
-			border: 0px !important;
-		}
 	}
 
 }

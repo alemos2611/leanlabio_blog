@@ -16,7 +16,7 @@ $gray-lighter:lighten($black,60%);
 // Fonts
 $font-family-serif: 'PT Serif', Georgia, 'Times New Roman', Times, serif !important;
 
-input, textarea, button, select, button{
+input, textarea, button, select, button, .editable{
 	outline: none !important;
   border: none !important;
   box-shadow:none !important;

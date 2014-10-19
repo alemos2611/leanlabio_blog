@@ -25,3 +25,5 @@ gem 'fog'
 gem "mini_magick"
 # file upload solution
 gem 'carrierwave'
+
+gem 'medium-editor-rails'
