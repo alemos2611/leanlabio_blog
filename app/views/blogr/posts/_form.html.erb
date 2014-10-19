@@ -10,7 +10,13 @@
 
   <div class="editable"></div>
   <%= f.hidden_field :text %>
-  <script>var editor = new MediumEditor('.editable');</script>
+  <script>
+    var editor = new MediumEditor('.editable', {
+      anchorInputPlaceholder: 'Type a link',
+      buttons: ['bold', 'italic', 'anchor', 'header1', 'header2', 'quote', 'strikethrough', 'unorderedlist', 'orderedlist', 'link', 'image'],
+      targetBlank: true
+  });
+  </script>
 
 
   <hr>
