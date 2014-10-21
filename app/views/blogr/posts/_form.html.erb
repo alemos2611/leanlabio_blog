@@ -8,16 +8,26 @@
     </style>
   </div>
 
-  <div class="editable"></div>
+  <div class="editable" data-content="<%= @post.text %>"></div>
   <%= f.hidden_field :text %>
-  <script>
-    var editor = new MediumEditor('.editable', {
-      anchorInputPlaceholder: 'Type a link',
-      buttons: ['bold', 'italic', 'anchor', 'header1', 'header2', 'quote', 'strikethrough', 'unorderedlist', 'orderedlist', 'link', 'image'],
-      targetBlank: true
-  });
-  </script>
-
+  <% if @post.text %>
+    <script>
+      var editor = new MediumEditor('.editable', {
+        anchorInputPlaceholder: 'Type a link',
+        buttons: ['bold', 'italic', 'anchor', 'header1', 'header2', 'quote', 'strikethrough', 'unorderedlist', 'orderedlist', 'link', 'image'],
+        targetBlank: true,
+        placeholder: ""
+      });
+    </script>
+  <% else %>
+    <script>
+      var editor = new MediumEditor('.editable', {
+        anchorInputPlaceholder: 'Type a link',
+        buttons: ['bold', 'italic', 'anchor', 'header1', 'header2', 'quote', 'strikethrough', 'unorderedlist', 'orderedlist', 'link', 'image'],
+        targetBlank: true
+      });
+    </script>
+  <% end %>
 
   <hr>
   <div class="form-group">
@@ -35,5 +45,5 @@
       <span>Publish?</span>
     </label>
   </div>
-  <%= f.submit nil, :class => "btn btn-primary mbx" %>
+  <%= f.submit nil, :class => "btn btn-primary mbxl" %>
 <% end %>
