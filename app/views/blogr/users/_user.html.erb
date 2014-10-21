@@ -1,9 +1,0 @@
-<tr>
-  <td><%= image_tag user.avatar, alt: "author avatar", :class => "img-circle avatar user-avatar avatar-xs" %></td>
-  <td><%= user.name %></td>
-  <td><%= user.email %></td>
-  <td><%= user.posts.count %></td>
-  <% if user == current_user %>
-    <td><%= link_to "Edit", edit_user_path(current_user) %></td>
-  <% end %>
-</tr>
