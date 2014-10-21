@@ -13,7 +13,7 @@ gemspec
 # To use debugger
 # gem 'debugger'
 
-gem 'bcrypt-ruby'
+gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'sass-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
