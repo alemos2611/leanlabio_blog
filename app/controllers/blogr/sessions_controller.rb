@@ -10,7 +10,7 @@ module Blogr
     def create
       user = User.find_by_email(params[:email])
 
-      if user && user.authenticate(params[:password])
+      if user && user.authenticate_user(params[:password])
         session[:user_id] = user.id
         redirect_to dashboard_user_path(current_user), notice: "Logged in!"
       else
