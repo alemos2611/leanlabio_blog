@@ -8,7 +8,7 @@
     </style>
   </div>
 
-  <div class="editable" data-content="<%= @post.text %>"></div>
+  <div class="editable content" data-content="<%= @post.text %>"></div>
   <%= f.hidden_field :text %>
   <% if @post.text %>
     <script>
@@ -16,6 +16,8 @@
         anchorInputPlaceholder: 'Type a link',
         buttons: ['bold', 'italic', 'anchor', 'header1', 'header2', 'quote', 'strikethrough', 'unorderedlist', 'orderedlist', 'link', 'image'],
         targetBlank: true,
+        firstHeader: "h1",
+        secondHeader: "h2",
         placeholder: ""
       });
     </script>
@@ -24,6 +26,8 @@
       var editor = new MediumEditor('.editable', {
         anchorInputPlaceholder: 'Type a link',
         buttons: ['bold', 'italic', 'anchor', 'header1', 'header2', 'quote', 'strikethrough', 'unorderedlist', 'orderedlist', 'link', 'image'],
+        firstHeader: "h1",
+        secondHeader: "h2",
         targetBlank: true
       });
     </script>
