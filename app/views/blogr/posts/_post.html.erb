@@ -9,8 +9,8 @@
     <h2 class="headline text-center"><%= link_to "#{post.title}", post, :class => "link-no-style" %></h2>
     <div class="info text-center mtl mbl">
       <p class="text-muted">
-        <%= image_tag post.user.avatar, alt: "author avatar", :class => "img-circle avatar user-avatar avatar-xs" %>
-        <%= post.user.name %>
+        <%= image_tag post.author.avatar, alt: "author avatar", :class => "img-circle avatar user-avatar avatar-xs" %>
+        <%= post.author.name %>
         wrote this
         <%= "on #{post.published_at.strftime("%b %d, %Y")}" if post.published_at %>
         |

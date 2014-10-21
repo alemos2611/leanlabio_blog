@@ -1,4 +1,4 @@
-<% if current_user %>
+<% if current_author %>
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="row">
@@ -18,8 +18,8 @@
           <div class="collapse navbar-collapse" id="collapse-menu">
             <div class="nav-spacer"></div>
             <ul class="nav navbar-nav">
-              <li class="<%= ("font-w-bold" if controller.controller_name == "users" && controller.action_name == "dashboard") %>">
-                <%= link_to 'Dashboard', dashboard_user_path(current_user), :class => "black-link" %>
+              <li class="<%= ("font-w-bold" if controller.controller_name == "authors" && controller.action_name == "dashboard") %>">
+                <%= link_to 'Dashboard', dashboard_author_path(current_author), :class => "black-link" %>
               </li>
               <li class="<%= ("font-w-bold" if controller.controller_name == "posts" && controller.action_name == "new") %>">
                 <%= link_to 'New Post', new_post_path, :class => "black-link" %>
@@ -28,7 +28,7 @@
             <ul class="nav navbar-nav navbar-right">
               <div class="nav-spacer"></div>
               <li>
-                <%= link_to "Log out", session_path(current_user), method: "delete", :class => "black-link" %>
+                <%= link_to "Log out", session_path(current_author), method: "delete", :class => "black-link" %>
               </li>
             </ul>
           </div>

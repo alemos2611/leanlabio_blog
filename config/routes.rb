@@ -3,7 +3,7 @@ Blogr::Engine.routes.draw do
 
   resources :subscribers
   resources :sessions
-  resources :users do
+  resources :authors do
     member do
       get 'dashboard'
     end

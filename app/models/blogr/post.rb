@@ -10,7 +10,7 @@ module Blogr
     mount_uploader :header, ImageUploader
 
     # Associations
-    belongs_to :user
+    belongs_to :author
 
     # Methods
     def slug

@@ -38,7 +38,7 @@ module Blogr
     # PATCH/PUT /subscribers/1
     def update
       if @subscriber.update(subscriber_params)
-        redirect_to dasboard_user_path(current_user), notice: 'Subscriber was successfully updated.'
+        redirect_to dasboard_author_path(current_author), notice: 'Subscriber was successfully updated.'
       else
         render :edit
       end
@@ -47,7 +47,7 @@ module Blogr
     # DELETE /subscribers/1
     def destroy
       @subscriber.destroy
-      redirect_to dasboard_user_path(current_user), notice: 'Subscriber was successfully destroyed.'
+      redirect_to dasboard_author_path(current_author), notice: 'Subscriber was successfully destroyed.'
     end
 
     private

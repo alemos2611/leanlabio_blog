@@ -14,17 +14,17 @@ module Blogr
         @subscriber = Subscriber.new
     end
 
-    def current_user
-      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    def current_author
+      @current_author ||= Author.find(session[:author_id]) if session[:author_id]
     end
-    helper_method :current_user
+    helper_method :current_author
 
     def authorize
-      redirect_to root_url, alert: "Not authorized!" if current_user.nil?
+      redirect_to root_url, alert: "Not authorized!" if current_author.nil?
     end
 
     def is_admin?
-      true if current_user
+      true if current_author
     end
     helper_method :is_admin?
   end

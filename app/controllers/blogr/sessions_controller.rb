@@ -8,11 +8,11 @@ module Blogr
     end
 
     def create
-      user = User.find_by_email(params[:email])
+      author = Author.find_by_email(params[:email])
 
-      if user && user.authenticate_user(params[:password])
-        session[:user_id] = user.id
-        redirect_to dashboard_user_path(current_user), notice: "Logged in!"
+      if author && author.authenticate(params[:password])
+        session[:author_id] = author.id
+        redirect_to dashboard_author_path(current_author), notice: "Logged in!"
       else
         flash[:error] = "Email or password is invalid."
         render :new
@@ -20,7 +20,7 @@ module Blogr
     end
 
     def destroy
-      session[:user_id] = nil
+      session[:author_id] = nil
       redirect_to root_url, notice: "Logged out!"
     end
   end
