@@ -1,9 +1,8 @@
 <tr>
-  <td><%= image_tag author.avatar, alt: "author avatar", :class => "img-circle avatar user-avatar avatar-xs" %></td>
-  <td><%= author.name %></td>
+  <td><%= image_tag author.avatar, alt: "author avatar", :class => "img-circle avatar user-avatar avatar-xs" %><span class="mtl mlm"><%= author.name %></span></td>
   <td><%= author.email %></td>
   <td><%= author.posts.count %></td>
   <% if author == current_author %>
-    <td><%= link_to "Edit", edit_author_path(current_author) %></td>
+    <td><%= link_to "Edit", edit_author_path(current_author), :class => "btn btn-primary btn-sm" %></td>
   <% end %>
 </tr>

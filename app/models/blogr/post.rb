@@ -22,11 +22,7 @@ module Blogr
     end
 
     def update_status
-      if published && published_at.nil?
-        self.published_at = DateTime.now
-      elsif published == false
-        self.published_at = nil
-      end
+      self.published_at = DateTime.now if published && published_at.nil?
     end
 
     def status

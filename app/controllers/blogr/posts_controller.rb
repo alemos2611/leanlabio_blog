@@ -7,7 +7,7 @@ module Blogr
 
     # GET /posts
     def index
-      @posts = Post.published
+      @posts = Post.published.order(:published_at)
 
       respond_to do |format|
         format.html
