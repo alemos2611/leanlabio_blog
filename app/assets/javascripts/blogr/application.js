@@ -13,5 +13,4 @@
 //= require jquery
 //= require bootstrap
 //= require jquery_ujs
-//= require medium-editor
 //= require_tree .
