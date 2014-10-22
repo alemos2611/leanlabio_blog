@@ -2,4 +2,7 @@ DONE Add subscribers
 DONE WYSIWYG Editor for creating posts
 DONE Style Dashboard
 DONE Style sign up form
-TODO Add subscribers to mailchimp list aith api
+TODO Add subscribers to mailchimp list via api
+TODO Remove number id from post url
+TODO look into permalink gems
+TODO Do some SEO research and imporve blog
