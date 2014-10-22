@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'carrierwave'
   s.add_dependency 'medium-editor-rails'
   s.add_dependency 'gibbon'
+  s.add_dependency 'friendly_id', '~> 5.0.0'
 
 
   s.add_development_dependency "pg"

@@ -16,10 +16,6 @@ class Blogr::ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  def default_url
-    "blogr/icon.png"
-  end
-
   # Create different versions of your uploaded files:
   version :large do
     # returns a 150x150 image

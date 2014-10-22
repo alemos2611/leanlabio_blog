@@ -28,3 +28,4 @@ gem 'carrierwave'
 
 gem 'medium-editor-rails'
 gem 'gibbon'
+gem 'friendly_id', '~> 5.0.0'

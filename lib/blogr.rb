@@ -9,6 +9,7 @@ require "mini_magick"
 require 'carrierwave'
 require 'medium-editor-rails'
 require 'gibbon'
+require 'friendly_id'
 
 
 module Blogr

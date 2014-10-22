@@ -1,5 +1,9 @@
 module Blogr
   class Post < ActiveRecord::Base
+    # Modules
+    extend FriendlyId
+    friendly_id :title, use: :slugged
+
     # Callbacks
     before_save :update_status
 
@@ -12,15 +16,10 @@ module Blogr
     # Associations
     belongs_to :author
 
+    # Validations
+    validates :title, uniqueness: { case_sensitive: false }
+
     # Methods
-    def slug
-      title.downcase.gsub(" ", "-")
-    end
-
-    def to_param
-      "#{id}-#{slug}"
-    end
-
     def update_status
       self.published_at = DateTime.now if published && published_at.nil?
     end

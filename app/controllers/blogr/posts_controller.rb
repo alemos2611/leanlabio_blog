@@ -7,7 +7,7 @@ module Blogr
 
     # GET /posts
     def index
-      @posts = Post.published.order(:published_at)
+      @posts = Post.published.order(published_at: :desc)
 
       respond_to do |format|
         format.html
@@ -57,7 +57,7 @@ module Blogr
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_post
-        @post = Post.find(params[:id])
+        @post = Post.friendly.find(params[:id])
       end
 
       # Only allow a trusted parameter "white list" through.
