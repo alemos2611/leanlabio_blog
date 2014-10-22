@@ -27,3 +27,4 @@ gem "mini_magick"
 gem 'carrierwave'
 
 gem 'medium-editor-rails'
+gem 'gibbon'
