@@ -4,7 +4,7 @@
     <% unless post.header.blank? %>
       <div class="header text-center">
         <%= link_to post, :class => "link-no-style" do %>
-          <%= image_tag post.header, alt: "post header", :class => "" %>
+          <%= image_tag post.header, alt: post.img_alt_text, :class => "" %>
         <% end %>
       </div>
     <% end %>
@@ -16,7 +16,7 @@
         wrote this
         <%= "on #{post.published_at.strftime("%b %d, %Y")}" if post.published_at %>
         |
-        <%= link_to "", post_url(post, anchor: "disqus_thread") %>
+        <%= link_to "Comments", post_url(post, anchor: "disqus_thread") %>
         <% if is_admin? %>
           |
           <%= link_to 'Edit', edit_post_path(post) %>

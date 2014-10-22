@@ -35,6 +35,22 @@
 
   <hr>
   <div class="form-group">
+    <%= f.label :descripion, "Meta Description" %>
+    <%= f.text_area :description, :class => "form-control" %>
+    <p class="help-block">
+      <i class="glyphicon glyphicon-info-sign"></i>
+      <%= link_to "How to write an effective meta description", "http://blog.hubspot.com/marketing/how-to-write-meta-description-ht" %>
+    </p>
+  </div>
+  <div class="form-group">
+    <%= f.label :meta_keywords %>
+    <%= f.text_field :meta_keywords, :class => "form-control" %>
+    <p class="help-block">
+      <i class="glyphicon glyphicon-info-sign"></i>
+      Up to 5 <underline>phrases</underline> (seperated by commas) that users might search when looking for this content.
+    </p>
+  </div>
+  <div class="form-group">
     <%= f.label :header, "Header Image" %>
     <%= f.file_field :header, :class => "form-control" %>
     <p class="help-block">
@@ -43,6 +59,17 @@
       <%= link_to "Unsplash", "http://www.arthurweill.fr/Unsplash/en" %>
     </p>
   </div>
+  <div class="form-group">
+    <%= f.label :img_alt_text, "Header Image Alt Text" %>
+    <%= f.text_field :img_alt_text, :class => "form-control" %>
+    <p class="help-block">
+      <i class="glyphicon glyphicon-info-sign"></i>
+      <%= link_to "Optimise images for google", "http://blog.hubspot.com/blog/tabid/6307/bid/32567/A-Marketer-s-Guide-to-Optimizing-Images-for-Google-Search.aspx" %>
+    </p>
+  </div>
+
+  <hr>
+  
   <div class="checkbox">
     <label>
       <%= f.check_box :published, :class => "form-control" %>

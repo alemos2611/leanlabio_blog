@@ -17,6 +17,7 @@ module Blogr
 
     # GET /posts/1
     def show
+      set_meta(@post.title, @post.description, @post.meta_keywords)
     end
 
     # GET /posts/new
@@ -66,7 +67,7 @@ module Blogr
 
       # Only allow a trusted parameter "white list" through.
       def post_params
-        params.require(:post).permit(:title, :text, :user_id, :published, :header)
+        params.require(:post).permit(:title, :text, :user_id, :published, :header, :description, :meta_keywords, :img_alt_text)
       end
   end
 end

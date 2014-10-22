@@ -2,10 +2,10 @@ module Blogr
   class ApplicationController < ActionController::Base
     before_filter :authorize, :set_meta, :new_subscriber
 
-    def set_meta(title="", description="", keyowrds="")
-      @meta_title = if title != "" then title else Blogr.meta_title end
-      @meta_description = if description != "" then title else Blogr.meta_description end
-      @meta_keywords = if keyowrds != "" then title else Blogr.meta_keywords end
+    def set_meta(title="Startup Idea Generation and Validation - Lenalab Blog", description="We're all about startup ideas. How to generate ideas, how to pick ideas, and how to validate ideas. We're learning all the time and will be sharing what we do here.", keywords="startup ideas, startup idea validation, startup idea generation, finding startup ideas, how to have startup ideas")
+      @meta_title = title
+      @meta_description = description
+      @meta_keywords = keywords
     end
 
     private

@@ -17,6 +17,7 @@ module Blogr
     belongs_to :author
 
     # Validations
+    validates :title, :text, presence: true
     validates :title, uniqueness: { case_sensitive: false }
 
     # Methods

@@ -5,7 +5,8 @@
 	input[type=email],
 	input[type=number],
 	input[type=date],
-	input[type=select]{
+	input[type=select],
+	textarea{
 		border: 2px solid $grey !important;
 		color: $black;
 		@include border_radius(5px,5px,5px,5px);

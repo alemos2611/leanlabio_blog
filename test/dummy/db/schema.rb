@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141022202241) do
+ActiveRecord::Schema.define(version: 20141022213831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,9 +40,12 @@ ActiveRecord::Schema.define(version: 20141022202241) do
     t.datetime "updated_at"
     t.integer  "author_id"
     t.datetime "published_at"
-    t.boolean  "published",    default: false
+    t.boolean  "published",     default: false
     t.string   "header"
     t.string   "slug"
+    t.text     "description"
+    t.string   "meta_keywords"
+    t.string   "img_alt_text"
   end
 
   add_index "blogr_posts", ["slug"], name: "index_blogr_posts_on_slug", unique: true, using: :btree
