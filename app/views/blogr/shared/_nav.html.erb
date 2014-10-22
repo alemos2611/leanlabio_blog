@@ -26,6 +26,9 @@
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+              <li>
+                <%= link_to "Blog", posts_path, :class => "black-link" %>
+              </li>
               <div class="nav-spacer"></div>
               <li>
                 <%= link_to "Log out", session_path(current_author), method: "delete", :class => "black-link" %>

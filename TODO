@@ -4,5 +4,6 @@ DONE Style Dashboard
 DONE Style sign up form
 DONE Add subscribers to mailchimp list via api
 TODO Remove number id from post url
+TODO Block guests from viewing unpublished posts
 TODO look into permalink gems
 TODO Do some SEO research and imporve blog

@@ -58,6 +58,10 @@ module Blogr
       # Use callbacks to share common setup or constraints between actions.
       def set_post
         @post = Post.friendly.find(params[:id])
+        # Redirect users if not admin and post is unpublished
+        if !@post.published && is_admin? == false
+          redirect_to root_url
+        end
       end
 
       # Only allow a trusted parameter "white list" through.

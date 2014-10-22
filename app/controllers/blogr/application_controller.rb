@@ -24,7 +24,7 @@ module Blogr
     end
 
     def is_admin?
-      true if current_author
+      if current_author then true else false end
     end
     helper_method :is_admin?
   end
