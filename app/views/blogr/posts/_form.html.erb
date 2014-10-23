@@ -16,8 +16,8 @@
         anchorInputPlaceholder: 'Type a link',
         buttons: ['bold', 'italic', 'anchor', 'header1', 'header2', 'quote', 'strikethrough', 'unorderedlist', 'orderedlist', 'link', 'image'],
         targetBlank: true,
-        firstHeader: "h1",
-        secondHeader: "h2",
+        firstHeader: "h2",
+        secondHeader: "h3",
         placeholder: ""
       });
     </script>
@@ -26,8 +26,8 @@
       var editor = new MediumEditor('.editable', {
         anchorInputPlaceholder: 'Type a link',
         buttons: ['bold', 'italic', 'anchor', 'header1', 'header2', 'quote', 'strikethrough', 'unorderedlist', 'orderedlist', 'link', 'image'],
-        firstHeader: "h1",
-        secondHeader: "h2",
+        firstHeader: "h2",
+        secondHeader: "h3",
         targetBlank: true
       });
     </script>
@@ -69,7 +69,7 @@
   </div>
 
   <hr>
-  
+
   <div class="checkbox">
     <label>
       <%= f.check_box :published, :class => "form-control" %>
