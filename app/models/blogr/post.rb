@@ -28,5 +28,9 @@ module Blogr
     def status
       if published then "Published" else "Draft" end
     end
+
+    def should_generate_new_friendly_id?
+      title_changed?
+    end
   end
 end
