@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     blogr (0.0.1)
+      analytics-ruby (~> 2.0.0)
       bcrypt (~> 3.1.7)
       bootstrap-sass (~> 3.2.0)
       carrierwave
@@ -43,6 +44,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    analytics-ruby (2.0.10)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     bootstrap-sass (3.2.0.2)
@@ -151,6 +153,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  analytics-ruby (~> 2.0.0)
   bcrypt (~> 3.1.7)
   blogr!
   bootstrap-sass (~> 3.2.0)
