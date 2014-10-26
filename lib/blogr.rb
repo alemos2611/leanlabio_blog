@@ -10,6 +10,8 @@ require 'carrierwave'
 require 'medium-editor-rails'
 require 'gibbon'
 require 'friendly_id'
+require 'analytics-ruby'
+
 
 
 module Blogr
