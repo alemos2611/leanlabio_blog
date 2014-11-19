@@ -1,31 +1,28 @@
-.blogr{
-	.btn{
-		font-family: $font-family-primary;
-	}
+.btn{
+	font-family: $font-family-primary;
+}
 
-	.btn:active
-	{
-			box-shadow:none;
-	}
+.btn:active
+{
+    box-shadow:none;
+}
 
-	.btn-default{
-		@include minimal_button_style(lighten($black, 50%));
-	}
+.btn-default{
+	@include button_style_1(darken($light-grey, 2%));
+}
 
-	.btn-primary{
-		@include minimal_button_style($blue);
-	}
+.btn-primary{
+	@include button_style_1($blue);
+}
 
-	.btn-success{
-		@include minimal_button_style($green);
-	}
+.btn-success{
+	@include button_style_1($green);
+}
 
-	.btn-danger{
-		@include minimal_button_style($red);
-	}
+.btn-danger{
+	@include button_style_1($red);
+}
 
-	.btn-warning{
-		@include minimal_button_style($orange);
-	}
-
+.btn-warning{
+	@include button_style_1($orange);
 }
