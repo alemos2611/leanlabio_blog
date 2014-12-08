@@ -2,7 +2,7 @@ module Blogr
   class ApplicationController < ActionController::Base
     before_filter :authorize, :set_meta, :new_subscriber
 
-    def set_meta(title="Startup Idea Generation and Validation - Lenalab Blog", description="We're all about startup ideas. How to generate ideas, how to pick ideas, and how to validate ideas. We're learning all the time and will be sharing what we do here.", keywords="startup ideas, startup idea validation, startup idea generation, finding startup ideas, how to have startup ideas")
+    def set_meta(title="From Idea to Startup - The Lenalab Blog", description="We're all about startup ideas. How to generate ideas, how to pick ideas, and how to validate ideas. We're learning all the time and will be sharing what we do here.", keywords="startup ideas, startup idea validation, startup idea generation, finding startup ideas, how to have startup ideas")
       @meta_title = title
       @meta_description = description
       @meta_keywords = keywords

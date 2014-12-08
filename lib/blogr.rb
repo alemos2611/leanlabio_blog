@@ -11,6 +11,7 @@ require 'medium-editor-rails'
 require 'gibbon'
 require 'friendly_id'
 require 'segment/analytics'
+require 'truncate_html'
 
 
 

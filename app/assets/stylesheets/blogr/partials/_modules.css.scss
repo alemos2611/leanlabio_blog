@@ -62,4 +62,17 @@
     background: white;
     @include border_radius(5px,5px,5px,5px);
   }
+
+  .m-attention{
+    font-family: $font-family-secondary;
+    background: $background;
+    border: 10px solid white;
+    @include box_shadow(darken($grey, 1%), 0px, 2px, 5px, 1px);
+    .contents{
+      width: 100%;
+      height: 100%;
+      border: 1px solid darken($background, 10%);
+    }
+    // @include border_radius(5px,5px,5px,5px);
+  }
 }

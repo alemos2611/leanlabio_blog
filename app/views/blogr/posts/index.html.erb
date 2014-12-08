@@ -1,3 +1,39 @@
+<div class="container intro mtl mbxl">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="m-attention">
+        <div class="contents text-center pam">
+          <h1 class="heading-l mtxl">From idea to viable startup, we're sharing what we learn along the way.</h1>
+          <%= form_for @subscriber, html: { :class => "mtxl mbxl" } do |f| %>
+            <%= render "blogr/shared/form_errors", object: @subscriber %>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                  <%= f.text_field :email, :class => "form-control mbm input-lg", placeholder: "Enter your email address" %>
+                </div>
+                <div class="col-md-4">
+                  <%= f.submit "Keep me informed", :class => "btn btn-danger btn-block btn-lg" %>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <p class="text-muted">
+              You can always unsubscribe using the link in any email we send.
+            </p>
+
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+
+    </div>
+  </div>
+</div>
 <div class="container posts">
-  <%= render @posts %>
+  <%- @posts.each do |post| %>
+    <%= render "index_post", post: post %>
+  <% end %>
 </div>

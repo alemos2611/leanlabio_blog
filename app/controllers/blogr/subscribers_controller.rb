@@ -29,7 +29,7 @@ module Blogr
       @subscriber = Subscriber.new(subscriber_params)
 
       if @subscriber.save
-        redirect_to root_url, notice: 'Great! we\'ll email you when we publish new articles on startup ideas.'
+        redirect_to root_url, notice: 'Great! we\'ll email you when we publish new articles.'
       else
         render :new
       end

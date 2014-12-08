@@ -7,7 +7,7 @@
   background-image:      -o-linear-gradient(top, $top_color, $bottom_color);
 }
 
-@mixin box_shadow($color: darken($interface-bg, 1%), $hoff: 1px, $voff: 0px, $blur: 5px, $spread: 3px){
+@mixin box_shadow($color: lighten($grey, 5%), $hoff: 1px, $voff: 0px, $blur: 6px, $spread: 2px){
 	-moz-box-shadow:    $hoff $voff $blur $spread $color !important;
   -webkit-box-shadow: $hoff $voff $blur $spread $color !important;
   box-shadow:         $hoff $voff $blur $spread $color !important;

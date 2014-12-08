@@ -16,7 +16,7 @@
 	// ===========
 
 	// colors
-	.font-std-color{ color: $light-black; }
+	.font-std-color{ color: $black; }
 	.font-white{ color: white; }
 	.font-blue{ color: $blue; }
 	.font-red{ color: $red; }
@@ -70,7 +70,7 @@
 		font-weight: 400 !important;
 	}
 
-	.headline-underline{ border-bottom: 3px solid $light-black; }
+	.headline-underline{ border-bottom: 3px solid $black; }
 
 	.heading-xl{
 		font-size: 52px;

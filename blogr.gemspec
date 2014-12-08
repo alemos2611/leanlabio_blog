@@ -29,6 +29,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'gibbon'
   s.add_dependency 'friendly_id', '~> 5.0.0'
   s.add_dependency 'analytics-ruby', '~> 2.0.0'
+  s.add_dependency 'truncate_html'
+
 
 
   s.add_development_dependency "pg"

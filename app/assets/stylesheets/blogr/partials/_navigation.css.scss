@@ -30,7 +30,7 @@
       &:hover{
         background: transparent;
         text-decoration: underline;
-        color: $dark-blue;
+        color: darken($blue, 10%);
       }
     }
     .navbar-nav > li > a.btn{
@@ -53,11 +53,11 @@
       border-top: 1px solid $grey;
       border-bottom: 1px solid white;
       &:hover{
-        background-color: $interface-bg;
+        background-color: $background;
       }
     }
     .nav-pills > li.active > a {
-      background-color: $interface-bg;
+      background-color: $background;
       color: $black;
       font-weight: bold;
     }

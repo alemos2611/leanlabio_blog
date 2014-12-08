@@ -14,6 +14,7 @@ PATH
       mini_magick
       rails (~> 4.1.0)
       sass-rails
+      truncate_html
 
 GEM
   remote: https://rubygems.org/
@@ -91,7 +92,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
-    mail (2.6.1)
+    mail (2.6.3)
       mime-types (>= 1.16, < 3)
     medium-editor-rails (0.11.0)
       railties (>= 3.0)
@@ -146,6 +147,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
+    truncate_html (0.9.3)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
 
@@ -166,3 +168,4 @@ DEPENDENCIES
   mini_magick
   pg
   sass-rails
+  truncate_html
