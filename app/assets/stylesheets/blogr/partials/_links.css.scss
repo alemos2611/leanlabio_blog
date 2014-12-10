@@ -1,60 +1,72 @@
-.blogr{
-  a.anchor{
-    display: block;
-    position: relative;
-    top: -70px;
-    visibility: hidden;
+a{
+  color: $blue;
+  &:hover, &:focus{
+    color: lighten($blue, 10%);
   }
+}
 
-  .image-link{
-    &:hover{
-      text-decoration: none;
-    }
-  }
+a.anchor{
+  display: block;
+  position: relative;
+  top: -70px;
+  visibility: hidden;
+}
 
-  .link-blue{
-    color: $blue;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  .link-red{
-    color: $red;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  .link-no-style{
-    color: inherit;
+.image-link{
+  &:hover, &:focus{
     text-decoration: none;
-    &:hover{
-      text-decoration: none;
-      color: inherit;
+  }
+}
+
+.link-blue{
+  color: $blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-red{
+  color: $red;
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover, &:focus{
+    color: darken($red, 10%);
+  }
+}
+
+.link-no-style{
+  color: inherit;
+  text-decoration: none !important;
+  &:hover, &:focus{
+    text-decoration: none !important;
+    color: inherit;
+  }
+}
+
+.link-no-ul{
+  text-decoration: none !important;
+}
+
+.link-black{
+  color: $black;
+  text-decoration: underline;
+  &:hover, &:focus{
+    color: $black
+  }
+}
+
+.blank-slate-link{
+  &:hover, &:focus{
+    text-decoration: none;
+    .m-blank-slate{
+      background: $light-grey;
     }
   }
+}
 
-  .link-black{
-    color: $black;
-    text-decoration: underline;
-    &:hover{
-      color: $black
-    }
-  }
-
-  .blank-slate-link{
-    &:hover{
-      text-decoration: none;
-      .m-blank-slate{
-        background: $background;
-      }
-    }
-  }
-
-  .muted-link{
-    color: $muted;
-    text-decoration: underline;
-    &:hover{
-      color: darken($muted, 5%);
-    }
+.muted-link{
+  color: $muted;
+  text-decoration: underline;
+  &:hover, &:focus{
+    color: darken($muted, 5%);
   }
 }
