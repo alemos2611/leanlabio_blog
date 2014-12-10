@@ -15,6 +15,7 @@ PATH
       rails (~> 4.1.0)
       sass-rails
       truncate_html
+      voight_kampff
 
 GEM
   remote: https://rubygems.org/
@@ -86,6 +87,7 @@ GEM
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
+    httpclient (2.4.0)
     i18n (0.6.11)
     ipaddress (0.8.0)
     jquery-rails (3.1.0)
@@ -150,6 +152,9 @@ GEM
     truncate_html (0.9.3)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    voight_kampff (0.2.1)
+      httpclient (~> 2.2)
+      nokogiri (~> 1.6.0)
 
 PLATFORMS
   ruby
@@ -169,3 +174,4 @@ DEPENDENCIES
   pg
   sass-rails
   truncate_html
+  voight_kampff

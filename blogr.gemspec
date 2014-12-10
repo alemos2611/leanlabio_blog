@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'friendly_id', '~> 5.0.0'
   s.add_dependency 'analytics-ruby', '~> 2.0.0'
   s.add_dependency 'truncate_html'
+  s.add_dependency 'voight_kampff'
 
 
 

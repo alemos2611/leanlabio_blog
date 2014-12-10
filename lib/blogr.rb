@@ -12,6 +12,7 @@ require 'gibbon'
 require 'friendly_id'
 require 'segment/analytics'
 require 'truncate_html'
+require 'voight_kampff'
 
 
 

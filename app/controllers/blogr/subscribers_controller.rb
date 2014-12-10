@@ -18,6 +18,7 @@ module Blogr
     # GET /subscribers/new
     def new
       @subscriber = Subscriber.new
+      Analytics.track(user_id: analytics_id, event: "View: blogr_subscribers#new", properties: { subscriber_id: @subscriber.id }) unless is_robot?
     end
 
     # GET /subscribers/1/edit
@@ -27,6 +28,7 @@ module Blogr
     # POST /subscribers
     def create
       @subscriber = Subscriber.new(subscriber_params)
+      Analytics.track(user_id: analytics_id, event: "View: blogr_subscribers#create", properties: { subscriber_id: @subscriber.id }) unless is_robot?
 
       if @subscriber.save
         redirect_to root_url, notice: 'Great! we\'ll email you when we publish new articles.'
