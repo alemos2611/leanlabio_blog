@@ -1,8 +1,8 @@
 xml.instruct! :xml, :version => "1.0"
 xml.rss :version => "2.0" do
   xml.channel do
-    xml.title "Your Blog Title"
-    xml.description "Your blog description"
+    xml.title "From Idea to Startup - The Lenalab Blog"
+    xml.description "We're all about startup ideas. How to generate ideas, how to pick ideas, and how to validate ideas. We're learning all the time and will be sharing what we do here."
     xml.link posts_url
 
     for post in @posts
