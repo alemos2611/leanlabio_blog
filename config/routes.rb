@@ -10,4 +10,6 @@ Blogr::Engine.routes.draw do
   end
   resources :posts, path: "/"
   root 'posts#index'
+
+  get 'feed.rss', controller: :posts, action: :rss, format: 'rss' , path: '/posts/feed.rss'
 end

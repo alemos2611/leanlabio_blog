@@ -3,7 +3,7 @@ require_dependency "blogr/application_controller"
 module Blogr
   class PostsController < ApplicationController
     before_action :set_post, only: [:show, :edit, :update, :destroy]
-    skip_before_filter :authorize, only: [:show, :index]
+    skip_before_filter :authorize, only: [:show, :index, :rss]
 
     # GET /posts
     def index
@@ -12,6 +12,14 @@ module Blogr
 
       respond_to do |format|
         format.html
+        format.rss { render :layout => false }
+      end
+    end
+
+    def rss
+      @posts = Post.published.order(published_at: :desc)
+
+      respond_to do |format|
         format.rss { render :layout => false }
       end
     end
