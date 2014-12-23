@@ -9,7 +9,19 @@ module Blogr
     end
 
     def analytics_id
-      session[:guest_id]
+      if current_user then current_user.id else session[:guest_id] end
+    end
+
+    def analytics
+      @analytics ||= Analytics.new(session[:guest_id], google_analytics_client_id)
+    end
+
+    def google_analytics_client_id
+      google_analytics_cookie.gsub(/^GA\d\.\d\./, '')
+    end
+
+    def google_analytics_cookie
+      cookies['_ga'] || ''
     end
 
     def track_guest

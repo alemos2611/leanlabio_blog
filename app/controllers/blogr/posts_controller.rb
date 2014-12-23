@@ -8,7 +8,7 @@ module Blogr
     # GET /posts
     def index
       @posts = Post.published.order(published_at: :desc)
-      Analytics.track(user_id: analytics_id, event: "View: blogr_posts#index", properties: {}) unless is_robot?
+      analytics.track(user_id: analytics_id, event: "View: blogr_posts#index", properties: {}) unless is_robot?
 
       respond_to do |format|
         format.html
@@ -27,7 +27,7 @@ module Blogr
     # GET /posts/1
     def show
       set_meta(@post.title, @post.description, @post.meta_keywords)
-      Analytics.track(user_id: analytics_id, event: "View: blogr_posts#show", properties: { post_id: @post.id }) unless is_robot?
+      analytics.track(user_id: analytics_id, event: "View: blogr_posts#show", properties: { post_id: @post.id }) unless is_robot?
     end
 
     # GET /posts/new
