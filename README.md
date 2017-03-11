@@ -19,3 +19,9 @@ $ cd yourappname_blog
 $ git remote rm origin
 ```
 # leanlabio_blog
+
+
+git add .
+git commit -m "update to 5.0.0 commit"
+git push -u origin master
+
