@@ -11,5 +11,7 @@ Blogr::Engine.routes.draw do
   resources :posts, path: "/"
   root 'posts#index'
 
-  get 'feed.rss', controller: :posts, action: :rss, format: 'rss' , path: '/posts/feed.rss'
+ # get 'feed.rss', controller: :posts, action: :rss, format: 'rss' , path: '/posts/feed.rss'
+
+  get 'feed/rss', controller: :posts, action: :rss, format: 'rss' , path: '/posts/feed.rss'
 end
