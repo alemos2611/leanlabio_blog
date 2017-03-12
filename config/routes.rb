@@ -13,5 +13,9 @@ Blogr::Engine.routes.draw do
 
  # get 'feed.rss', controller: :posts, action: :rss, format: 'rss' , path: '/posts/feed.rss'
 
-  get 'feed/rss', controller: :posts, action: :rss, format: 'rss' , path: '/posts/feed.rss'
+#1: route def 
+  match "/posts/feed.rss", :as => "feed/rss", :action => "rss" , via: [:post]
+#1: route result   feed_rss POST   /posts/feed.rss(.:format)        blogr#rss
+
+  #get 'feed/rss', controller: :posts, action: :rss, format: 'rss' , path: '/posts/feed.rss'
 end
