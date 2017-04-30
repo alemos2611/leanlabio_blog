@@ -7,9 +7,9 @@ require "blogr/version"
 Gem::Specification.new do |s|
   s.name        = "blogr"
   s.version     = Blogr::VERSION
-  s.authors     = ["Gareth Fuller"]
-  s.email       = ["gareth.a.f@gmail.com"]
-  s.homepage    = "https://github.com/GAFuller/blogr"
+  s.authors     = ["leanlab team"]
+  s.email       = ["admin@leanlab.io"]
+  s.homepage    = "https://github.com/alemos2611/blogr"
   s.summary     = "Blogging engine for existing rails apps."
   s.description = "A mountable rails engine that can be used to attach a blog to any existing rails app."
   s.license     = "Leanlab LTD"
